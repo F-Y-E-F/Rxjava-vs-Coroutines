@@ -2,6 +2,7 @@ package com.example.rxjava.retrofit.rxjava
 
 import com.example.rxjava.retrofit.ToDo
 import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
@@ -18,7 +19,7 @@ class RxJavaApi {
         toDosService = retrofit.create(ToDosService::class.java)
     }
 
-    fun getToDos(): Observable<List<ToDo>> {
+    fun getToDos(): Single<List<ToDo>> {
         return toDosService.getToDos().observeOn(Schedulers.io())
     }
 
