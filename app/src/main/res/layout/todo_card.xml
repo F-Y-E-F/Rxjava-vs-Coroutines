@@ -2,21 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/todoId"
         android:layout_width="match_parent"
+        android:textAlignment="center"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/todoUserId"
         android:layout_width="match_parent"
+        android:textAlignment="center"
+
         android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/todoTitle"
         android:layout_width="match_parent"
+        android:textAlignment="center"
         android:layout_height="wrap_content"/>
 
     <CheckBox

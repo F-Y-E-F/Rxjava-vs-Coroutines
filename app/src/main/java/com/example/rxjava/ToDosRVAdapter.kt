@@ -15,9 +15,9 @@ class ToDosRVAdapter(private val listOfToDos:List<ToDo>):RecyclerView.Adapter<To
     }
 
     override fun onBindViewHolder(holder: ToDoViewHolder, position: Int) {
-        holder.todoId.text = listOfToDos[holder.adapterPosition].id.toString()
-        holder.todoUserId.text = listOfToDos[holder.adapterPosition].userId.toString()
-        holder.todoTitle.text = listOfToDos[holder.adapterPosition].title
+        holder.todoId.text = "id : " + listOfToDos[holder.adapterPosition].id.toString()
+        holder.todoUserId.text =  "user id : " +listOfToDos[holder.adapterPosition].userId.toString()
+        holder.todoTitle.text =  "title : " +listOfToDos[holder.adapterPosition].title
         holder.todoCheck.isChecked = listOfToDos[holder.adapterPosition].completed
     }
 
