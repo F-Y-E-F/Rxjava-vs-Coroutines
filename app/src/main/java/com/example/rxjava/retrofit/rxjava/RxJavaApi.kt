@@ -1,5 +1,6 @@
-package com.example.rxjava.retrofit
+package com.example.rxjava.retrofit.rxjava
 
+import com.example.rxjava.retrofit.ToDo
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import retrofit2.Retrofit
