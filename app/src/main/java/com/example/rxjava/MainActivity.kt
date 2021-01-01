@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.rxjava.retrofit.Post
 import com.example.rxjava.retrofit.ToDo
 import com.example.rxjava.retrofit.rxjava.RxJavaApi
 import io.reactivex.rxjava3.core.SingleObserver
@@ -40,6 +41,15 @@ class MainActivity : AppCompatActivity() {
         text.text = "After response thread"
         coroutinesButton.setOnClickListener {
             startActivity(Intent(applicationContext,MainActivity2::class.java))
+        }
+
+
+        addPostButton.setOnClickListener {
+            rxJavaApi.addPost(Post("some body",1,"some title",1))
+                .subscribe {
+                    Log.d("TAG",it.toString())
+                    Log.d("TAG",Thread.currentThread().name)
+                }
         }
 
     }
